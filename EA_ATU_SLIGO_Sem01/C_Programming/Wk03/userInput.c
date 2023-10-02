@@ -2,7 +2,7 @@
 *
 * File Name: userInput.c
 *
-* Description: Function that will add and print the two given variable a and b
+* Description: Program requesting integer input form user and print on screen
 *
 * Programmer: Damian Sikora
 *
