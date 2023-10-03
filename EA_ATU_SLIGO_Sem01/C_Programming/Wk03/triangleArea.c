@@ -13,11 +13,25 @@
 ******************************************************************************/
 #include <stdio.h>
 
+int triArea(int base, int height){
+    int area = 0;
+
+    area = 0.5*base*height;
+
+    return area; 
+}
+
 void main(vois){
-    int x = 0;
-    printf("Please enter the integer numcer: ");
-    scanf("%d",&x);/*important note on this line is the sign &*/
-    printf("\nThe number you have been entered = %d\n", x);
+    int base = 0;
+    int height = 0;
+    int area =0;
+
+    printf("Enter base [integer]: ");
+    scanf("%d",&base);
+    printf("\nEnter height [integer]: ");
+    scanf("%d",&height);
+    area = triArea(base, height);
+    printf("\nThe area of spec. triangle = %d\n", area);
 
     system("pause");
     return 0;
