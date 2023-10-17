@@ -2,38 +2,49 @@
 *
 * File Name: roundInteger.c
 *
-* Description: Program calculate wage base on working hours including overtime.
+* Description: Program to round real number to integer closest equivalent.
 *
 * Programmer: Damian Sikora
 *
-* Date: 13/Oct/2023
+* Date: 17/Oct/2023
 *
-* Version 1.0
+* Version 1.3
 *
 ******************************************************************************/
 #include <stdio.h>
 
-#define rate 10
+int inputRounding(float userInput);
 
 int main(void){
 
-    int workingHours = 0;
-    int wage = 0;
-
-    printf("Enter the total week working hours: ");
-    scanf("%d", &workingHours);
-
-    if (workingHours>39){
-        wage = (workingHours-39)*1.5*rate+390;
-        printf("Total pay would be EUROS%d\n", wage);
-    }
-    else{
-        wage = workingHours*rate;
-        printf("Total pay would be EUROS\n", wage);
-    }
-
+    float userInput = 0;
+   
+    printf("Enter the real number (at least 3 decimal) ");
+	scanf("%f",&userInput);
+    userInput=inputRounding(userInput); /*Call sounding function*/
+    printf("Rounded number = %d\n", (int)userInput);
+	
     system("pause");
     return 0;
+}
+
+int inputRounding(float userInput){
+	int roundedNumber = 0;
+    float decimalValue = 0;
+    
+    
+	decimalValue = userInput*100;
+	roundedNumber = (int)userInput; /*the direct casting not working */
+	roundedNumber = (int)decimalValue-roundedNumber*100;
+	 
+	if (roundedNumber>=49){
+		userInput = userInput + 1;
+		return (int)userInput;
+	}
+	else{
+		return (int)userInput;
+	}
+	
 }
 
 /******************************************************************************
