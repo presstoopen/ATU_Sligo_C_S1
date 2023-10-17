@@ -21,7 +21,7 @@ int main(void){
    
     printf("Enter the real number (at least 3 decimal) ");
 	scanf("%f",&userInput);
-    userInput=inputRounding(userInput); /*Call sounding function*/
+    userInput=inputRounding(userInput); /*Call rounding function*/
     printf("Rounded number = %d\n", (int)userInput);
 	
     system("pause");
