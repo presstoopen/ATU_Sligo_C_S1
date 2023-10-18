@@ -14,13 +14,42 @@
 #include <stdio.h>
 #include <math.h> /*Library math.h use to use the sqrt function*/
 
+float firstRoot(int a, int b, int c);
+float secoundRoot(int a, int b, int c);
 
 int main(void){
       
+    int userInputA = 0;
+    int userInputB = 0;
+    int userInputC = 0;
+    float rootOne, rootTwo;
 
+    printf("Enter a value: ");
+    scanf("%d",&userInputA);
+    printf("Enter b value: ");
+    scanf("%d",&userInputB);
+    printf("Enter c value: ");
+    scanf("%d",&userInputC);
+
+    rootOne = firstRoot(userInputA,userInputB,userInputC);
+    rootTwo = secoundRoot(userInputA,userInputB,userInputC);
+    printf("First root = %0.3f\n",rootOne);
+	printf("Secound root = %0.3f\n",rootTwo);
 
     system("pause");
     return 0;
+}
+
+float firstRoot(int a, int b, int c){
+    float firstResoult;
+    firstResoult=(-b+(b*b-4*a*c))/2*a;
+    return firstResoult;
+}
+
+float secoundRoot(int a, int b, int c){
+    float secoundResoult;
+    secoundResoult=(-b-(b*b-4*a*c))/2*a;
+    return secoundResoult;
 }
 
 /******************************************************************************
