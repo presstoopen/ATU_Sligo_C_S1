@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* File Name: AverageOfTenNumWhileLoop.c
+* File Name: AverageUntil.c
 *
 * Description: Teake 10 numbers form user and print average.
 *
