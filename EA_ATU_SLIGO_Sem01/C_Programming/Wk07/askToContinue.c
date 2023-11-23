@@ -2,72 +2,50 @@
 *
 * File Name: askToContinue.c
 *
-* Description: Program to calculate sume of two given numbers and ask user if
-*              would like to continue caltulation.
+* Description: Program to calculate running average.
 *
 * Programmer: Damian Sikora
 *
-* Date: 20/Nov/2023
+* Date: 23/Nov/2023
 *
 * Version 1.0
 *
 ******************************************************************************/
 #include <stdio.h>
 
-int sumeOfTwoNumbers(int numOne, int numTwo);
-
 int main(void){
 
-    char userStatement;
-    int numOne;
-    int numTwo;
-    int sumOfTwo;
+    int userInput;
+    float runAvr=0;
+    int i=0;
     
-    printf("Would you like to calculate sume of two numbers (y-Yes or n-No): ");
-	scanf("%c",&userStatement);
+    printf("Enter result on 0 to exit: ");
+	scanf(" %d",&userInput);
 
         do{
-	        
-	        if(userStatement == 'y'){
-			    printf("Enter first number: ");
-        	    scanf("%d",&numOne);
-                printf("Enter secound number: ");
-        	    scanf("%d",&numTwo);
-                sumOfTwo = sumeOfTwoNumbers(numOne, numTwo);
-                printf("Sume of two given numbers: %d\n",sumOfTwo);
-
-            }
-            printf("Would you like to calculate sume of two numbers (y-Yes or n-No): ");
-            scanf(" %c",&userStatement); /*Space added to prevent the repeateion*/
+            i++;
+	        runAvr = (runAvr + userInput)/i;
+            printf("Runung average: %d %f\n", i, (float)runAvr);
+            printf("Enter result on 0 to exit: ");
+	        scanf(" %d",&userInput);
         }
-        while(userStatement!='n');
+        while(userInput !=0);
     
     system("pause");
     return 0;
 }
 
-int sumeOfTwoNumbers(numOne, numTwo){
-	
-    int sumeOfTwoNumbers;
-	sumeOfTwoNumbers = numOne + numTwo;
-
-    return sumeOfTwoNumbers;
-}
 
 /******************************************************************************
 *
 * Task:
 *    
-*   Write a program to compute the sum of two numbers.
+*   Write a program that continually asks the user for numbers and prints the
+*   current average after each intput.
 *
-*   Ask the user if they wish to compute the sum of two numbers.
+*   If the user wishs to stop inputing they should input a zero.
 *
-*   The answers should be y for Yes or n for No.
-*
-*   if the answer is yes then ask for the two numbers and then print out the
-*   sum of the two.
-*
-*   Then ask again and keep asking until the user enters n for No.
+*   Use a while loop for this.
 *
 *
 ******************************************************************************/
