@@ -1,30 +1,30 @@
 /******************************************************************************
 *
-* File Name: SumOfTenNum.c
+* File Name: bottomForBits.c
 *
-* Description: Teake 10 numbers form user and print sum.
+* Description: Check if LSB on the user input is 0 or 1.
 *
 * Programmer: Damian Sikora
 *
-* Date: 24/Oct/2023
+* Date: 14/Nov/2023
 *
 * Version 1.0
 *
 ******************************************************************************/
 #include <stdio.h>
 
+
 int main(void){
 
     int userInput = 0;
-    int i = 0;
-    int sum = 0;
+    int bottomFourth = 0;
 
-    for(i=0; i<10; i++){
-        printf("Enter any integer number: ");
-        scanf("%i", &userInput);
-        sum += userInput;
-    }
-    printf("Sume of all ten numbers = %d\n", sum);
+    printf("Enter first integer number: ");
+    scanf("%d", &userInput);
+
+    bottomFourth = userInput & 0x8;
+  
+    printf("The bottom fourth bit of %d = %d\n", userInput, bottomFourth);
 
     system("pause");
     return 0;
@@ -34,8 +34,8 @@ int main(void){
 *
 * Task:
 *    
-*    Modify the previous program to take in 10 numbers from the user and then
-*    print out the sum of the 10 numbers.
+*    Write a program that takes in a number from the user and determine what
+*    number is represented by the bottom four bits only.
 *
 *
 ******************************************************************************/

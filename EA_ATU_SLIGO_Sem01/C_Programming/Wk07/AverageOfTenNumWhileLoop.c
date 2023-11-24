@@ -1,30 +1,35 @@
 /******************************************************************************
 *
-* File Name: SumOfTenNum.c
+* File Name: AverageUntil.c
 *
-* Description: Teake 10 numbers form user and print sum.
+* Description: Teake 10 numbers form user and print average.
 *
 * Programmer: Damian Sikora
 *
-* Date: 24/Oct/2023
+* Date: 07/Nov/2023
 *
-* Version 1.0
+* Version 1.1
 *
 ******************************************************************************/
 #include <stdio.h>
+
+const int numberOfSteps = 10;
 
 int main(void){
 
     int userInput = 0;
     int i = 0;
     int sum = 0;
+    float average = 0;
 
-    for(i=0; i<10; i++){
+    while(i<numberOfSteps){
         printf("Enter any integer number: ");
         scanf("%i", &userInput);
         sum += userInput;
+        i++;
     }
-    printf("Sume of all ten numbers = %d\n", sum);
+    average = (float)sum/numberOfSteps;
+    printf("Average of all given numbers = %0.2f\n", average);
 
     system("pause");
     return 0;
@@ -34,8 +39,7 @@ int main(void){
 *
 * Task:
 *    
-*    Modify the previous program to take in 10 numbers from the user and then
-*    print out the sum of the 10 numbers.
+*    Re write the average of 10 numbers program using a while loop
 *
 *
 ******************************************************************************/
