@@ -6,7 +6,7 @@
 *
 * Programmer: Damian Sikora
 *
-* Date: 23/Nov/2023
+* Date: 24/Nov/2023
 *
 * Version 1.0
 *
@@ -15,22 +15,23 @@
 
 int main(void){
 
-    int userInput;
+    int userInput=1;
     float runAvr=0;
     int i=0;
     
-    printf("Enter result on 0 to exit: ");
-	scanf(" %d",&userInput);
-
-        do{
-            i++;
-	        runAvr = (runAvr + userInput)/i;
-            printf("Runung average: %d %f\n", i, (float)runAvr);
-            printf("Enter result on 0 to exit: ");
-	        scanf(" %d",&userInput);
-        }
-        while(userInput !=0);
-    
+    while(userInput>0){
+        printf("Enter result or 0 to exit: ");
+	    scanf(" %d",&userInput);
+	        
+		if(userInput == 0){
+			break;
+		}
+	runAvr = (runAvr*i + userInput)/(i+1);
+    printf("Runung average: %.2f\n", runAvr);
+        
+    i++;
+    }
+        
     system("pause");
     return 0;
 }
