@@ -2,12 +2,11 @@
 *
 * File Name: toUpperCase.c
 *
-* Description: Teke one char form user and check if it is upper case, if it is
-               small letter then change to capital and return.
+* Description: Program to recognise the vovals (AEIOUYW) of given character.
 *
 * Programmer: Damian Sikora
 *
-* Date: 4/Dec/2023
+* Date: 6/Dec/2023
 *
 * Version 1.0
 *
@@ -19,15 +18,45 @@ char toUpperCase(char userInput);
 int main(void){
 
     char userInput;
-    int isUpperCase;
-    char newUserInput;
   
     printf("Enter the single char: ");
     scanf("%c", &userInput);
     
     userInput = toUpperCase(userInput);
-    
-  	printf("Capital letter of the given char: %c\n", userInput);
+
+    switch(userInput){
+      case 'A' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'E' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'I' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'O' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'U' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'Y' :
+          printf("Given character is the vowel\n");
+          break;
+
+      case 'W' :
+          printf("Given character is the vowel\n");
+          break;
+
+      default:
+          printf("Given character is the conconant\n");
+
+    }
 
     system("pause");
     return 0;

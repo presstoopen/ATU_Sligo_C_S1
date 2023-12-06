@@ -34,15 +34,14 @@ int main(void){
 *
 * Function Name:  porerFunction
 *    
-* Input Parameters: float x 
-*    Write a function
-*    float power( float x, int n)
-*    that will compute xn, the nth power of x.
-*    Write a main functions that tests it.
-*    Check to see that it computes 3.57 .
-*    The answer is 6433.929688.
+* Input Parameters: float x - variable that will be squared
+*                   int n - power variable
 *
-*    Note: do not use the pow() function from the <math.h> library.
+* Return: float return - function return the result of power x to n
+*
+* Purpose of function: Purpose of this function is to get number x and n,
+*                      initialize variable resoult and cout the power of
+*                      x to the n and return is as a result of.
 *
 ******************************************************************************/
 
