@@ -19,7 +19,7 @@ char toUpperCase(char userInput);
 int main(void){
 
     int userInput;
-    char *decodedText[] = {""};
+    char *decodedText[10];
     int i = 0;
     int modNumber;
     char *numAsText[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -37,11 +37,11 @@ int main(void){
     }
     
     while(i>0){
-    	printf("%s ", decodedText[i]);
     	i--;
+    	printf("%s ", decodedText[i]);
 	}
+	printf("\n");
     
- 
     system("pause");
     return 0;
 }
